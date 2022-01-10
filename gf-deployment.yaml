@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for kubectl versions >= 1.9.0 use apps/v1
+kind: Deployment
+metadata:
+  name: gf-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: gf-deployment
+  template:
+    metadata:
+      labels:
+        app: gf-deployment
+    spec:
+      containers:
+      - name: gf-pod
+        image: jimmyfu87/gamefishing
+        ports:
+        - containerPort: 3000

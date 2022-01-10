@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Congrats !!!</title>
+    <link rel="stylesheet" href="/stylesheets/new.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Chewy" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Basic" />
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+
+<body onload="show_result()">
+    <audio autoplay src="/audio/game_win.mp3"></audio>
+    <section id="title1">
+        <div class="container">
+            <div class="row" style="color: white;
+            font-family: 'Chewy';">
+                <div class="col-md-4"style="
+                max-width: 350px;"></div>
+                <div class="col-md-4">
+                    <h1 style="font-size:80px;">Congratulation!</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id = "rankkk" style="height:800px;">
+        <div class="container" style="height:600px;">
+            <div class="row" style="color: white;height:600px;">
+                <div class="col-md-3" style="height:600px;max-width:200px;"></div>
+                <div class="col-md-2" style="height:600px;margin-top: 198px;max-width:260px;">
+                    <div class ="row justify-content-center">
+                        <!-- 第二名在左邊 -->
+                        <h3 style="font-size: 50px;font-family: 'Chewy';"><output id="array2"></h3>
+                    </div>
+                    <div class="row">
+                        <svg width="238" height="600">
+                            <rect width="238" height="600" style="fill: #8B59A8;" />
+                            <circle cx="120" cy="100" r="61" stroke="black" stroke-width="0" style="fill:#C4C4C4;" />
+                            <text x="100" y="130" fill="red" style="font-size: 80px;fill: white;font-family: 'Chewy';">2</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-md-2" style="height:600px;margin-top: 98px;max-width:260px;margin-left:20px;">
+                    <div class ="row justify-content-center">
+                        <!-- 第一名在中間 -->
+                        <h3 style="font-size: 50px;font-family: 'Chewy';"><output id="array1"></h3>
+                    </div>
+                    <div class ="row">
+                        <svg width="238" height="700">
+                            <rect width="238" height="700" style="fill: #8B59A8;" />
+                            <circle cx="120" cy="100" r="61" stroke="black" stroke-width="0" style="fill:#FFD600;" />
+                            <text x="110" y="130" fill="red" style="font-size: 80px;fill: white;font-family: 'Chewy';">1</text>
+
+                        </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-2" style="height:600px;margin-top: 250px;max-width:260px;margin-left:20px">
+                        <div class ="row justify-content-center">
+                        <!-- 第三名在右邊 -->
+                            <h3 style="font-size: 50px;font-family: 'Chewy';"><output id="array3"></h3>
+                        </div>
+                        <div class ="row">
+                        <svg width="238" height="550">
+                            <rect width="238" height="550" style="fill: #8B59A8;" />
+                            <circle cx="120" cy="100" r="61" stroke="black" stroke-width="0" style="fill:#C17B12;" />
+                            <text x="100" y="130" fill="red" style="font-size: 80px;fill: white;font-family: 'Chewy';">3</text>
+                        </svg>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </section>
+    <!--
+        <div id="first">
+            <div class="rect"></div>
+            <div class="medal"></div>
+            <div class="number">1</div>
+            <div class="group"><output id="array1"></div>
+        </div>
+
+        <div id="second">
+            <div class="rect"></div>
+            <div class="medal"></div>
+            <div class="number">2</div>
+            <div class="group"><output id="array2"></div>
+        </div>
+
+        <div id="third">
+            <div class="rect"></div>
+            <div class="medal"></div>
+            <div class="number">3</div>
+            <div class="group"><output id="array3"></div>
+        </div>
+    </section>-->
+
+
+
+    <script src='ajax.js'></script>
+
+
+</body>
+
+</html>

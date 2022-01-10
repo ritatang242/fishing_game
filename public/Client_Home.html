@@ -1,0 +1,255 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--字型-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Chewy" />
+    <!--自定義css-->
+    <link rel="stylesheet" href='/stylesheets/Client_Home.css'>
+    <!--魚在游泳-->
+    <script src="javascripts/p5.min.js"></script>
+    <script src="javascripts/shape5.js"></script>
+    <script src="javascripts/p5.play.js"></script>
+    <script src="FishSwimming.js"></script>
+</head>
+
+<body onload="getgroupinfo();">
+    <!-- 音效 -->
+    <audio id="click_sound" src="/audio/click_btn.mp3" preload="auto"></audio>
+    <audio src="/audio/bgm.mp3" autoplay loop></audio>
+
+    <section id = "NameAndRound">
+        <div class="container">
+            <div class = "row">
+                <div class = "col-md-6">
+                    <h3><output id="grounpname"></output> &nbsp; Company</h3>
+                </div>
+                <div class = "col-md-4">
+                </div>
+                <div class = "col-md-2">
+                    <h3>Round <output id="rounds"></output></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id = "Fishes">
+        <div class="container">
+        </div>
+    </section>
+
+    <section id = "Profile">
+        <div class="container">
+            <div class = "row">
+                <div class = "col-md-3">
+                    <h6>Number of ships : <output id="ships"></output></h6>
+                </div>
+                <div class = "col-md-3">
+                    <h6>Number of fish : <output id="fishes" style="width:0;"></output></h6>
+                </div>
+                <div class = "col-md-2">
+                </div>
+                <div class = "col-md-2">
+                    <button type="button" class="btn btn-defaule" data-toggle="modal" data-target="#buyship" id="actionbtn" onclick="check_buy_ship();">Action</button>
+                </div>
+                <div class = "col-md-2">
+                    <button type="button" class="btn btn-defaule"  data-toggle="modal" data-target="#readytowait" >Ready</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--要不要買船的彈跳視窗-->
+    <section id = "Modal">
+    <div class="modal fade" id="buyship" tabindex="-1" role="dialog" aria-labelledby="buyshipLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="buyshipLabel">BUY SHIP OR NOT ?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="document.getElementById('click_sound').play();">
+                <span aria-hidden="true">&#8855;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <label class="switch" id='buyfish_switch'>
+                    <input type="checkbox" id='checkbox_fish'>
+                    <span class="slider round"></span>
+                </label>
+                <div class = "row">
+                    <div class = "col-md-4"></div>
+                    <div class = "col-md-2">
+                        <h3>Not</h3>
+                    </div>
+                    <div class = "col-md-2">
+                        <h3>Buy</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#decision" data-dismiss="modal" onclick="check_max_fish()">Next Step</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+    <!--oops的彈跳視窗-->
+    <section id = "Modal">
+        <div class="modal fade" id="readytowait" tabindex="-1" role="dialog" aria-labelledby="readytowaitLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="readytowaitLabel">OOPS!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="document.getElementById('click_sound').play();">
+                    <span aria-hidden="true">&#8855;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class = "row" id="oopscontent">
+                        <h3 id="oopsline1">Waiting for other groups,</h3>
+                        <h3 id="oopsline2">please check later...</h3>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="document.getElementById('click_sound').play();" data-dismiss="modal" >OK</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!--做決策的彈跳視窗-->
+    <section id = "Modal">
+        <div class="modal fade" id="decision" tabindex="-1" role="dialog" aria-labelledby="decisionLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="decisionLabel">DECISION</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"  onclick="document.getElementById('click_sound').play();">
+                        <span aria-hidden="true">&#8855;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <!--<div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Catch fishes&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="select1">
+                                <li><a class="dropdown-item" href="#" value="1">Catch fishes</a></li>
+                                <li><a class="dropdown-item" href="#" value="2">Take a rest</a></li>
+                                <li><a class="dropdown-item" href="#" value="3">Release fish back</a></li>
+                            </ul>
+                        </div>-->
+                        <div class = row>
+                            <select id="yourdecision" onchange="setmaxfish()">
+                                <option>&emsp;&emsp;Choose Your Decision</option>
+                                <option value="1">Catch fish</option>
+                                <option value="2">Take a rest</option>
+                                <option value="3">Release fish back</option>
+                            </select>
+                        </div>
+
+                        <!--依照選項show不同的bar-->
+                        <script>
+                            $("#yourdecision").change(function(){
+                                if($(this).val() == 1){
+                                $("#onlycatchfish").show();
+                                $("#onlyletfishback").hide();
+                                $('#slider').prop({
+                                    'min': 10,
+                                    'max': 70
+                                });
+                                }else {
+                                    if($(this).val() == 3){
+                                        $("#onlycatchfish").hide();
+                                        $("#onlyletfishback").show();
+                                    }else{
+                                        $("#onlycatchfish").hide();
+                                        $("#onlyletfishback").hide();
+                                    }
+                                }
+                            });
+                        </script>
+
+                        <!--如果選放生才選要放幾條魚-->
+                        <div id="onlyletfishback" style="display:none;">
+                            <div class = "row" style="margin-top: 45px;">
+                                <div class = "col-md-1" ></div>
+                                <div class = "col-md-1"style="
+                                padding-left: 16px">0</div>
+                                <div class = "col-md-1"style="
+                                padding-left: 51px">1</div>
+                                <div class = "col-md-1"style="
+                                padding-left: 63px">2</div>
+                                <div class = "col-md-1"style="
+                                padding-left: 60px">3</div>
+                                <div class = "col-md-1"style="
+                                padding-left: 62px">4</div>
+                                <div class = "col-md-1"style="
+                                padding-left: 63px">5</div>
+                            </div>
+
+                            <label for="customRange3" class="form-label"></label>
+                            <input type="range" class="form-range" min="1" max="5" value="0"step="1" id="letfishbacknum">
+                        </div>
+
+                        <!--如果選捕魚才選要補幾條魚-->
+                        <div id="onlycatchfish" style="display:none;">
+                            <div class ="row" style="height:15px;"></div>
+                            <label for="customRange3" class="form-label"></label>
+                            <input type="range" class="form-range" min="0" max="5" value="0"step="1" class="slider" id="fishdelta">
+                            <p id = "catfishnum"><span id="fishshow"></span></p>
+                            <script>
+                                var slider = document.getElementById("fishdelta");
+                                var output = document.getElementById("fishshow");
+                                output.innerHTML = slider.value; // Display the default slider value
+                                // Update the current slider value (each time you drag the slider handle)
+                                slider.oninput = function() {
+                                  output.innerHTML = this.value;
+                                }
+                                var maxbuyfish = sessionStorage.getItem('max_buy_fish');
+                                console.log(maxbuyfish);
+                                document.getElementById("fishdelta").setAttribute("max", maxbuyfish);
+                            </script>
+                            <script>
+                                function setmaxfish(){
+                                    var maxbuyfish = sessionStorage.getItem('max_buy_fish');
+                                    console.log(maxbuyfish);
+                                    document.getElementById("fishdelta").setAttribute("max", maxbuyfish);
+                                }
+                            </script>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <!--是要按鈕變色就好還是跳頁?-->
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cofirmthedecision" onclick = catchfish()>Confirm</button>
+                        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal" id="cofirmthedecision">Confirm</button>-->
+                    </div>
+                    <!--按了confirm，按鈕action要變色-->
+                    <!--<script>
+                        document.querySelector('#cofirmthedecision').addEventListener('click', function(){
+                            console.log("我按了");
+                            document.querySelector('#actionbtn').style.background='linear-gradient(83.53deg, #B114FF -13.77%, #6699FF 118.89%)';
+                        })
+                    </script>-->
+                </div>
+                </div>
+            </div>
+    </section>
+    <!--一進頁面就先檢查他的魚貨跟船和第幾回合-->
+    <script src='ajax.js'></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
+<html>

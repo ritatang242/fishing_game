@@ -1,0 +1,13 @@
+# my-first-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gf-pod
+  labels:
+    app: webserver
+spec:
+  containers:
+  - name: gf-pod
+    image: jimmyfu87/gameFishing
+    ports:
+    - containerPort: 3000

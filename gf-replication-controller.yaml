@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: gf-replication-controller
+spec:
+  replicas: 3
+  selector:
+    app: gamefishing-pod-v1
+  template:
+    metadata:
+      labels:
+        app: gamefishing-pod-v1
+    spec:
+      containers:
+      - name: gf-pod
+        image: jimmyfu87/gamefishing
+        ports:
+        - containerPort: 3000

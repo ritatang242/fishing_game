@@ -1,0 +1,465 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #05adb9 0%, rgba(71, 151, 238, 0.28) 22%, #037d92b7 62%, #04A5AF 100%, #047faf 100%), radial-gradient(ellipse at center, #029ca7 0%, #04afaf 22%, #047faf 62%, #04A5AF 100%, #04a4afee 100%);
+}
+
+a {
+    color: #00B7FF;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    color: white;
+    /* bnt */
+    background-image: linear-gradient(83.53deg, #B114FF -13.77%, #6699FF 118.89%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+#inputName {
+    height: 600px;
+}
+
+#inputName h1 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#inputName .container {
+    text-align: center;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#inputName input {
+    height: 133px;
+    border-radius: 50px;
+    color: #FFFFFFD9;
+}
+
+#inputName input::-webkit-input-placeholder {
+    font-size: 36px;
+    line-height: 5;
+    text-align: center;
+    color: #4C4C4C;
+}
+
+#inputName .btn {
+    background: linear-gradient(83.53deg, #B114FF -13.77%, #6699FF 118.89%);
+    margin-top: 15px;
+    height: 80px;
+    width: 270px;
+    left: 504.5px;
+    top: 392px;
+    border-radius: 16px;
+    padding: 16px, 32px, 16px, 32px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    color: #FFFFFF;
+    line-height: 140%;
+    box-shadow: 5px 5px #888888;
+}
+
+#admin .g1 {
+    position: absolute;
+    width: 179px;
+    height: 83px;
+    left: 384px;
+    top: 163px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#admin .g2 {
+    position: absolute;
+    width: 135px;
+    height: 83px;
+    left: 887px;
+    top: 410px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#admin .g3 {
+    position: absolute;
+    width: 406px;
+    height: 83px;
+    left: 549px;
+    top: 285px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#admin .g4 {
+    position: absolute;
+    width: 186px;
+    height: 83px;
+    left: 701px;
+    top: 52px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#admin .g5 {
+    position: absolute;
+    width: 263px;
+    height: 83px;
+    left: 981px;
+    top: 204px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#admin .g6 {
+    position: absolute;
+    width: 193px;
+    height: 83px;
+    left: 63px;
+    top: 327px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#admin .g7 {
+    position: absolute;
+    width: 173px;
+    height: 83px;
+    left: 169px;
+    top: 72px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#admin .g8 {
+    position: absolute;
+    width: 151px;
+    height: 83px;
+    left: 308px;
+    top: 431px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.start {
+    position: absolute;
+    width: 270px;
+    height: 80px;
+    left: 620px;
+    top: 612px;
+}
+
+
+/*.continue {
+     Auto Layout
+    position: absolute;
+    width: 270px;
+    height: 80px;
+    left: 1138px;
+    top: 612px;
+}
+
+.end {
+     Auto Layout
+    position: absolute;
+    width: 270px;
+    height: 80px;
+    left: 1138px;
+    top: 722px;
+}*/
+#all {
+    position: absolute;
+    top: 55%;
+    left:15%;
+    transform: translate(-50%, -50%);
+
+}
+
+#rank .title {
+    /* Current Rank */
+    position: absolute;
+    width: 277px;
+    height: 62px;
+    left: 1010px;
+    top: 21px;
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 130%;
+    /* or 62px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#rank .container {
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 130%;
+    /* or 62px */
+
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+
+    text-align: center;
+    width: 2100px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+
+
+#first .rect {
+    position: absolute;
+    width: 238px;
+    height: 562px;
+    left: 552px;
+    top: 177px;
+    background: #8B59A8;
+    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.25);
+}
+
+#second .rect {
+    position: absolute;
+    width: 238px;
+    height: 415px;
+    left: 314px;
+    top: 324px;
+    background: #8B59A8;
+    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.25);
+}
+
+#third .rect {
+    position: absolute;
+    width: 238px;
+    height: 296px;
+    left: 784px;
+    top: 443px;
+    background: #8B59A8;
+    box-shadow: 0px 0px 20px 6px rgba(0, 0, 0, 0.25);
+}
+
+#first .medal {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 610px;
+    top: 202px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 100px;
+    background: #FFD600;
+}
+
+#second .medal {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 372px;
+    top: 349px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 100px;
+    background: #C4C4C4;
+}
+
+#third .medal {
+    position: absolute;
+    width: 122px;
+    height: 122px;
+    left: 842px;
+    top: 471px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 100px;
+    background: #C17B12;
+}
+
+#first .number {
+    position: absolute;
+    width: 23px;
+    height: 83px;
+    left: 659px;
+    top: 221px;
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#second .number {
+    position: absolute;
+    width: 31px;
+    height: 83px;
+    left: 417px;
+    top: 368px;
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#third .number {
+    position: absolute;
+    width: 32px;
+    height: 83px;
+    left: 887px;
+    top: 490px;
+    font-family: Basic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#first .group {
+    position: absolute;
+    width: 186px;
+    height: 83px;
+    left: 578px;
+    top: 81px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#second .group {
+    position: absolute;
+    width: 193px;
+    height: 83px;
+    left: 336px;
+    top: 241px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+#third .group {
+    position: absolute;
+    width: 135px;
+    height: 83px;
+    left: 835px;
+    top: 360px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    /* or 83px */
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.dot {
+    height: 30px;
+    width: 30px;
+    background: #EE63AE;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#confirmbtn .btn {
+    background: linear-gradient(83.53deg, #B114FF -13.77%, #6699FF 118.89%);
+    margin-top: 15px;
+    height: 80px;
+    width: 270px;
+    left: 504.5px;
+    top: 392px;
+    border-radius: 16px;
+    padding: 16px, 32px, 16px, 32px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    color: #FFFFFF;
+    line-height: 140%;
+    box-shadow: 5px 5px #888888;
+}

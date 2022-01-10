@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>Fishing Game</title>
+  <link rel="stylesheet" href="/stylesheets/new.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Chewy" />
+    <!--自定義css-->
+    <link rel="stylesheet" href='/stylesheets/Client_Register.css'>
+</head>
+
+<body>
+    <!-- 音效 -->
+    <audio id="click_sound" src="/audio/click_btn.mp3" preload="auto"></audio>
+
+    <section id = "inputName">
+        <div class="container">
+            <div class = "row" style="height: 160px"></div>
+            <h1>Fishing</h1>
+            <div class="input-group">
+                <input id="GroupNumber" type="text" class="form-control" placeholder="Input number of groups" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="button" class="btn" onclick=open_game()>Game Start</button>
+            <script>
+                document.getElementById('GroupNumber').onkeyup = function() {
+                    var gn=this.value
+                    console.log(gn)
+                    sessionStorage.setItem('gn',gn)
+                    console.log('Your group number is '+ sessionStorage.getItem('gn'))
+                }
+                var v1 = sessionStorage.getItem('gn')
+                console.log(v1)
+            </script>
+            <script src='ajax.js'></script>
+        </div>
+    </section>
+
+</body>
+</html>

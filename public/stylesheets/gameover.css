@@ -1,0 +1,49 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #be2b8d 0%, rgba(177, 20, 255, 0.21) 22%, #b41b74 62%, #5f1266 100%, #77278b 100%) , radial-gradient(ellipse at center, #D21C7F 0%, #8B59A8 22%, #B114FF 62%, #FFE814 100%, #FFA114 100%);
+    opacity: 0.7;
+}
+
+#gameover .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -90%);
+
+    font-family: Iceberg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    line-height: 130%;
+    /* or 187px */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+}
+
+#gameover .subtitle {
+    position: absolute;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 40%);
+
+    font-family: Iceberg;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 130%;
+    /* or 83px */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+}

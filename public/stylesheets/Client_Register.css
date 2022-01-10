@@ -1,0 +1,68 @@
+body {
+    height: 850px;
+    background: linear-gradient(to bottom, #05adb9 0%, rgba(71, 151, 238, 0.28) 22%, #037d92b7 62%, #04A5AF 100%, #047faf 100%), radial-gradient(ellipse at center, #029ca7 0%, #04afaf 22%, #047faf 62%, #04A5AF 100%, #04a4afee 100%);
+}
+
+#inputName {
+    height: 600px;
+}
+
+#inputName h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+#inputName .container {
+    text-align: center;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#inputName h3 {
+    margin: 30px;
+    color: white;
+    font-size: 36px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+#inputName input {
+    height: 133px;
+    border-radius: 50px;
+    color: black;
+    font-size: 36px;
+    text-align: center;
+}
+
+#inputName input::-webkit-input-placeholder {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 5;
+    text-align: center;
+    color: #4C4C4C;
+}
+
+#inputName .btn {
+    background: linear-gradient(83.53deg, #B114FF -13.77%, #6699FF 118.89%);
+    margin-top: 30px;
+    height: 80px;
+    width: 270px;
+    left: 504.5px;
+    top: 392px;
+    border-radius: 16px;
+    padding: 16px, 32px, 16px, 32px;
+    font-family: Chewy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    color: #FFFFFF;
+    line-height: 140%;
+    box-shadow: 5px 5px 4px #888888;
+}
