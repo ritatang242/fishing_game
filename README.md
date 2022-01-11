@@ -11,16 +11,17 @@
 + 系統分析架構：傅俊益
 
 ## Demo影片
-[demo_yt](https://youtu.be/9--9HktaRW0)
+[![Watch the video](https://user-images.githubusercontent.com/47220603/148874947-48918678-39c2-492e-ad6f-af42cc73fce5.png)](https://www.youtube.com/watch?v=9--9HktaRW0)
 
 ## UI設計
 
-![figma](https://ritatang242.github.io/fishing_game/demo/UI_design.jpg) <br>
+![figma](demo/UI_design.jpg?raw=true) <br>
+[View in detail](https://www.figma.com/file/czCga8mpyHjVzSrr3uTFmP/gamefishing?node-id=306%3A8932)
 
 ## Database ERD
 
-![db](https://ritatang242.github.io/fishing_game/demo/db_erd.jpg) <br>
+![db](demo/db_erd.jpg) <br>
 
 
 ## API 
-![api](https://ritatang242.github.io/fishing_game/demo/api_struct.png) <br>
+![api](demo/api_struct.png) <br>
